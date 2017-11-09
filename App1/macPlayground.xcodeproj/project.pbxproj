@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B975CBB41FB4DBEB00574B16 /* HockeySDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B975CBB31FB4DBEB00574B16 /* HockeySDK.framework */; };
+		B975CBB51FB4DBFA00574B16 /* HockeySDK.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = B975CBB31FB4DBEB00574B16 /* HockeySDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B9861FB71F9A2E7700075D55 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9861FB61F9A2E7700075D55 /* AppDelegate.swift */; };
 		B9861FB91F9A2E7700075D55 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9861FB81F9A2E7700075D55 /* ViewController.swift */; };
 		B9861FBB1F9A2E7700075D55 /* Document.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9861FBA1F9A2E7700075D55 /* Document.swift */; };
@@ -33,7 +35,21 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		B91B343F1FB4D98100E381DB /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				B975CBB51FB4DBFA00574B16 /* HockeySDK.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		B975CBB31FB4DBEB00574B16 /* HockeySDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = HockeySDK.framework; sourceTree = "<group>"; };
 		B9861FB31F9A2E7700075D55 /* macPlayground.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = macPlayground.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9861FB61F9A2E7700075D55 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B9861FB81F9A2E7700075D55 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -55,6 +71,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B975CBB41FB4DBEB00574B16 /* HockeySDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -75,9 +92,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B97D0FF51FB4DB0F00ECE473 /* Vendor */ = {
+			isa = PBXGroup;
+			children = (
+				B975CBB31FB4DBEB00574B16 /* HockeySDK.framework */,
+			);
+			path = Vendor;
+			sourceTree = "<group>";
+		};
 		B9861FAA1F9A2E7700075D55 = {
 			isa = PBXGroup;
 			children = (
+				B97D0FF51FB4DB0F00ECE473 /* Vendor */,
 				B9861FB51F9A2E7700075D55 /* macPlayground */,
 				B9861FCA1F9A2E7800075D55 /* macPlaygroundTests */,
 				B9861FD51F9A2E7800075D55 /* macPlaygroundUITests */,
@@ -137,6 +163,7 @@
 				B9861FAF1F9A2E7700075D55 /* Sources */,
 				B9861FB01F9A2E7700075D55 /* Frameworks */,
 				B9861FB11F9A2E7700075D55 /* Resources */,
+				B91B343F1FB4D98100E381DB /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -424,6 +451,10 @@
 				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = AR36AR2PBF;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Vendor",
+				);
 				INFOPLIST_FILE = macPlayground/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.piratespaceship.macPlayground;
@@ -442,6 +473,10 @@
 				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = AR36AR2PBF;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Vendor",
+				);
 				INFOPLIST_FILE = macPlayground/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.piratespaceship.macPlayground;
